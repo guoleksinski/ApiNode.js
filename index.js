@@ -24,9 +24,10 @@ app.get('/', (req, res) => {
 
 
 //port listener
-const DB_USER = process.env.DB_USER
-const DB_PASS = encodeURIComponent(process.env.DB_PASS)
-mongoose.connect(`mongodb+srv://${DB_USER}:${DB_PASS}@apicluster.twrkl.mongodb.net/bancoToDo?retryWrites=true&w=majority`,)
+const DB_USER = "dasdas"
+const DB_PASS = "dasdas"
+MONGO_CONNECTION_STRING="mongodb://mongo-db:27017"
+mongoose.connect(MONGO_CONNECTION_STRING)
 .then(() => {
     console.log("conectado ao mongoDb")
     app.listen(port)
